@@ -36,11 +36,18 @@ button:hover {
 .loginbtn{
   background-color: blue;
 }
-.cancelbtn, .signupbtn , .loginbtn {
+.delete_button{
+  background-color: red;
+}
+.edit_button{
+background-color: blue;
+}
+.cancelbtn, .signupbtn , .loginbtn, .edit_button, .delete_button {
   float: left;
   width: 50%;
 }
 .container {
+
   padding: 16px;
 }
 
@@ -49,3 +56,13 @@ button:hover {
   clear: both;
   display: table;
 }
+
+/* .edit_button{
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 10%;
+  opacity: 0.9;
+} */

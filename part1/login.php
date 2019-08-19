@@ -4,6 +4,10 @@
 <body>
 
 <?php
+
+session_start();
+
+
 $servername = "localhost";
 $username = "danil";
 $password = "danil";
@@ -27,10 +31,13 @@ $count = mysqli_num_rows($result);
 
 if (mysqli_num_rows($result) == 1) {
 
-    echo "<h2>Welcome to the system, ". $login_username . " !</h2>";
+  $_SESSION['username'] = $login_username;
+
+  header('Location: bookmarks.php');
 
 } else {
-    echo "Wrong password or login";
+
+    header("Location: login.html");
 }
 
 mysqli_close($conn);
