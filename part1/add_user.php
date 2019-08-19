@@ -22,6 +22,7 @@ $new_password = mysqli_real_escape_string($conn, $_POST['psw']);
 $sql = "INSERT INTO users (username, password) VALUES ('$new_username', '$new_password')";
 $result = mysqli_query($conn, $sql);
 if ($result) {
+    header('Location: bookmarks.php');
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

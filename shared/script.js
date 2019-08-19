@@ -24,15 +24,52 @@ function edit_url(url, row_num){
 
   return url;
 
-}
+};
 function getNewUrl(row_num){
-  // console.log('getting url:' + 'new_url'+row_num);
   return document.getElementById('new_url'+row_num).value;
-}
+};
 var old_url = '';
 function setOldUrl(url){
   old_url = url;
-}
+};
+
+
+function add_bookmark(){
+
+  document.getElementById('add_bookmark').style.display = 'none';
+
+  add_new_url = document.createElement('input');
+  add_new_url.setAttribute('id', 'new_url_input');
+  document.body.appendChild(add_new_url);
+
+  add_button = document.createElement('button');
+  document.body.appendChild(add_button);
+  add_button.textContent = 'Save';
+  add_button.setAttribute('onclick', 'add_to_db()')
+
+};
+
+function add_to_db(){
+
+  url_to_add = document.getElementById('new_url_input').value;
+  console.log(url_to_add);
+
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+          document.body.innerHTML = this.responseText;
+      }
+
+    }
+
+
+xhttp.open("GET", "add_bookmark.php?new_url="+url_to_add, true);
+xhttp.send();
+
+};
+
 
 function change_url(row_num){
   console.log(row_num);

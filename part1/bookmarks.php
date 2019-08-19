@@ -66,4 +66,6 @@
 
   </body>
 
+  <button type="button" id="add_bookmark" style='width:10%' onclick="add_bookmark()">Add Bookmark</button>
+
 </html>
