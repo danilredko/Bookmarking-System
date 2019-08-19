@@ -36,18 +36,20 @@ function setOldUrl(url){
 
 function change_url(row_num){
   console.log(row_num);
-  console.log(old_url);
-  console.log(getNewUrl(row_num));
+  console.log("old_url: "+old_url);
+  console.log("new_url:" + getNewUrl(row_num));
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
+        strResponse = this.responseText.replace(/\s/g, '');
+        console.log(strResponse);
+        document.getElementById('row_button'+row_num).setAttribute("onclick", "edit_url("+"'"+getNewUrl(row_num)+"'"+","+row_num+")");
+        document.getElementById(old_url).textContent = strResponse;
+        document.getElementById(old_url).setAttribute('id', strResponse);
         document.getElementById('cancel_button').remove();
         document.getElementById('done_button').remove();
         document.getElementById('new_url'+row_num).remove();
-        document.getElementById('row_button'+row_num).setAttribute("onclick", "edit_url("+getNewUrl(row_num)+","+row_num+")");
-        document.getElementById(old_url).textContent = this.responseText;
-        document.getElementById(old_url).setAttribute('id', this.responseText);
 
     }
   };
