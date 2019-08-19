@@ -23,7 +23,6 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Always start this first
     session_start();
 
     if ( isset( $_SESSION['username'] ) ) {
@@ -36,13 +35,18 @@
 
       $result = mysqli_query($conn, $sql);
 
+      $row_num = 0;
+
       if (mysqli_num_rows($result) > 0){
 
-        while($row = mysqli_fetch_assoc($result)){
-          echo "<div class = 'container'>";
-          echo "<p style='width:50%;' >" , "URL: <a href=https://", $row['URL'],">",  $row['URL'] , "</a></p>";
 
-          echo "<button class='edit_button' onclick=" , "change_url(" , "'", $row['URL'] ,"'",  ")>Edit </button>";
+        while($row = mysqli_fetch_assoc($result)){
+          $row_num = $row_num + 1;
+
+          echo "<div id=row", $row_num, " class = 'container'>";
+          echo "<p style='width:50%;' >" , "URL: <a id=", $row['URL'], " href=https://", $row['URL'],">",  $row['URL'] , "</a></p>";
+
+          echo "<button id='row_button", $row_num, "' class='edit_button' onclick=" , "edit_url(" , "'", $row['URL'] ,"',$row_num)>Edit </button>";
 
           echo "<button class='delete_button'>Delete</button>";
           echo "</div>";
@@ -61,9 +65,5 @@
     ?>
 
   </body>
-
-<button type="button" name="button">CHANGE</button>
-
-
 
 </html>
