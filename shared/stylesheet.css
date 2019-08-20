@@ -9,7 +9,7 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: #9494b8;
   outline: none;
 }
 hr {
@@ -23,6 +23,7 @@ button {
   margin: 8px 0;
   border: none;
   width: 100%;
+  font-size: 20px;
   opacity: 0.9;
 }
 
@@ -42,13 +43,21 @@ button:hover {
 .edit_button{
 background-color: blue;
 }
-.cancelbtn, .signupbtn , .loginbtn, .edit_button, .delete_button {
+.edit_button, .delete_button {
   float: left;
   width: 50%;
-}
-.container {
 
-  padding: 16px;
+}
+
+.container {
+  padding: 10px;
+  float: left;
+  width: 50%;
+
+}
+
+.url_container{
+  width: 100%;
 }
 
 .clearfix::after {
@@ -56,13 +65,3 @@ background-color: blue;
   clear: both;
   display: table;
 }
-
-/* .edit_button{
-  background-color: blue;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  width: 10%;
-  opacity: 0.9;
-} */

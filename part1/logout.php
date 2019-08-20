@@ -7,7 +7,7 @@
 session_start();
 
 session_destroy();
-header('Location: bookmarks.php');
+header('Location: welcome_page.php');
 
 ?>
 

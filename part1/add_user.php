@@ -22,10 +22,14 @@ $new_password = mysqli_real_escape_string($conn, $_POST['psw']);
 $sql = "INSERT INTO users (username, password) VALUES ('$new_username', '$new_password')";
 $result = mysqli_query($conn, $sql);
 if ($result) {
+    session_start();
+    $_SESSION['username'] = $new_username;
     header('Location: bookmarks.php');
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    
+    header('Location: welcome_page.php');
+
 }
 
 mysqli_close($conn);

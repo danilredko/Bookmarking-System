@@ -17,6 +17,12 @@ session_start();
 $new_url = $_REQUEST['new_url'];
 $user = $_SESSION['username'];
 
+$check_sql = "SELECT URL from bookmarks where user_id='$user' and URL='$new_url'";
+
+$chech_result = mysqli_query($conn, $check_sql);
+
+if (mysqli_num_rows($chech_result) == 0){
+
 if ( isset( $user ) ) {
 
   $sql = "INSERT INTO bookmarks (BookMarkID, user_id, URL) VALUES (NULL, '$user', '$new_url')";
@@ -35,7 +41,15 @@ if ( isset( $user ) ) {
 }
 
 
-};
+}
+
+
+
+} else{
+
+  echo "Err";
+
+}
 mysqli_close($conn);
 
 ?>

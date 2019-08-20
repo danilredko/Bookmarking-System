@@ -1,5 +1,4 @@
 
-
 <?php
 $servername = "localhost";
 $username = "danil";
@@ -15,48 +14,32 @@ if (!$conn) {
 
 session_start();
 
-$new_url = $_REQUEST['new_url'];
-$old_url = $_REQUEST['old_url'];
+$delete_url = $_REQUEST['delete_url'];
 $user = $_SESSION['username'];
-
-$check_sql = "SELECT URL from bookmarks where user_id='$user' and URL='$new_url'";
-
-$chech_result = mysqli_query($conn, $check_sql);
-
-if (mysqli_num_rows($chech_result) == 0){
 
 
 if ( isset( $user ) ) {
 
-  $sql = "UPDATE bookmarks SET URL='$new_url' WHERE user_id='$user' AND URL = '$old_url'";
+  $sql = "DELETE FROM bookmarks WHERE user_id='$user' AND URL='$delete_url'";
 
   $result = mysqli_query($conn, $sql);
 
   if ($result){
 
-  echo $new_url;
-
+  header("Location: bookmarks.php");
 
 } else{
 
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 
-
 }
 
 
-}
+} else{
 
-
-}else{
-
-  echo 'Err';
+  echo "Err";
 
 }
-
-
-
-
 mysqli_close($conn);
 
 ?>

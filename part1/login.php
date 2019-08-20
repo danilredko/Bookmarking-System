@@ -37,7 +37,7 @@ if (mysqli_num_rows($result) == 1) {
 
 } else {
 
-    header("Location: login.html");
+    header("Location: welcome_page.php");
 }
 
 mysqli_close($conn);
