@@ -11,7 +11,7 @@ session_start();
 $servername = "localhost";
 $username = "danil";
 $password = "danil";
-$dbname = "bookmarking";
+$dbname = "learning";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -33,11 +33,11 @@ if (mysqli_num_rows($result) == 1) {
 
   $_SESSION['username'] = $login_username;
 
-  header('Location: bookmarks.php');
+  header('Location: homepage.php');
 
 } else {
 
-    header("Location: welcome_page.php");
+    header("Location: welcome_learning.php");
 }
 
 mysqli_close($conn);

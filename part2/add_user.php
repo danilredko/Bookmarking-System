@@ -6,11 +6,11 @@
 $servername = "localhost";
 $username = "danil";
 $password = "danil";
-$dbname = "bookmarking";
+$dbname = "learning";
 
-// Create connection
+
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
+
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -24,11 +24,11 @@ $result = mysqli_query($conn, $sql);
 if ($result) {
     session_start();
     $_SESSION['username'] = $new_username;
-    header('Location: bookmarks.php');
+    header('Location: homepage.php');
     echo "New record created successfully";
 } else {
-    
-    header('Location: welcome_page.php');
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // header('Location: welcome_learning.php');
 
 }
 
