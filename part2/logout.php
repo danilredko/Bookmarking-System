@@ -7,7 +7,7 @@
 session_start();
 
 session_destroy();
-header('Location: welcome_page.php');
+header('Location: welcome_learning.php');
 
 ?>
 

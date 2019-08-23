@@ -1,0 +1,58 @@
+CREATE TABLE users (
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    PRIMARY KEY (username)
+);
+
+CREATE TABLE chapter (
+    chapter_id INT NOT NULL AUTO_INCREMENT ,
+    username VARCHAR(30),
+    INDEX par_ind (username),
+    PRIMARY KEY(chapter_id),
+    FOREIGN KEY (username)
+        REFERENCES users(username)
+        ON DELETE SET NULL
+
+);
+
+CREATE TABLE content (
+
+  content_id INT NOT NULL AUTO_INCREMENT,
+  content_text TEXT,
+  chapter_id INT,
+  PRIMARY KEY(content_id),
+  INDEX chap_ind (chapter_id),
+  FOREIGN KEY(chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
+
+);
+
+CREATE TABLE quiz (
+
+  quiz_id INT NOT NULL AUTO_INCREMENT,
+  chapter_id INT,
+  PRIMARY KEY(quiz_id),
+  INDEX chap_ind(chapter_id),
+  FOREIGN KEY (chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
+);
+
+CREATE TABLE quiz_question (
+
+  question_id INT NOT NULL AUTO_INCREMENT,
+  quiz_id INT,
+  question TEXT,
+  PRIMARY KEY(question_id),
+  INDEX quiz_ind(quiz_id),
+  FOREIGN KEY (quiz_id) REFERENCES quiz(quiz_id) ON DELETE SET NULL
+
+);
+
+CREATE TABLE quiz_options (
+
+  option_id INT NOT NULL AUTO_INCREMENT,
+  question_id INT,
+  option TEXT,
+  right_answer INT,
+  PRIMARY KEY(option_id),
+  INDEX question_ind(question_id),
+  FOREIGN KEY (question_id) REFERENCES quiz_question(question_id) ON DELETE SET NULL
+)
