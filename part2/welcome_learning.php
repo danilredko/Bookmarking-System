@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../shared/stylesheet.css">
-    <script src='../shared/script.js'></script>
+    <script src='../shared/script_for_part2.js'></script>
   </head>
   <body>
 

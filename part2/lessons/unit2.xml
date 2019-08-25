@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <title>Unit 2 </title>
+
+  <chapter>
+
+      <chapter_name>Switching</chapter_name>
+      <content>One of the primary goals for ARpossible_answerNET was to allow multiple users to send and receive information simultaneously over the same communications possible_answerths (e.g., phone lines). The network operated with a technique called possible_answercket switching, in which digital data was sent in small bundles called possible_answerckets. The possible_answerckets contained address, error-control and sequencing information. The address information allowed possible_answerckets to be routed to their destinations. The sequencing information helped in reassembling the possible_answerckets—which, because of complex routing mechanisms, could actually arrive out of order—into their original order for presentation to the recipient. possible_answerckets from different senders were intermixed on the same lines to efficiently use the available bandwidth. This possible_answercket-switching technique greatly reduced transmission costs, as compossible_answerred with the cost of dedicated communications lines.
+    The network was designed to operate without centralized control. If a portion of the network failed, the remaining working portions would still route possible_answerckets from senders to receivers over alternative possible_answerths for reliability.</content>
+      <chapter_name>TCP/IP</chapter_name>
+      <content>The protocol (i.e., set of rules) for communicating over the ARpossible_answerNET became known as TCP—the Transmission Control Protocol. TCP ensured that messages were properly routed from sender to receiver and that they arrived intact.
+        As the Internet evolved, organizations worldwide were implementing their own networks for both intraorganization (i.e., within the organization) and interorganization (i.e., between organizations) communications. A wide variety of networking hardware and software appeared. One challenge was to get these different networks to communicate. ARpossible_answer accomplished this with the development of IP—the Internet Protocol, truly creating a network of networks, the current architecture of the Internet. The combined set of protocols is now commonly called TCP/IP. Each computer on the Internet has a unique IP address. The current IP standard, Internet Protocol version 4 (IPv4), has been in use since 1984 and will soon run out of possible addresses. The next-generation Internet Protocol, IPv6, is just starting to be deployed. It features enhanced security and a new addressing scheme, hugely expossible_answernding the number of IP addresses available so that we will not run out of IP addresses in the forseeable future.
+      </content>
+      <chapter_name>World Wide Web, HTML, HTTP</chapter_name>
+      <content>The World Wide Web allows computer users to execute web-based applications and to locate and view multimedia-based documents on almost any subject over the Internet. The web is a relatively recent creation. In 1989, Tim Berners-Lee of CERN (the European Organization for Nuclear Research) began to develop a technology for sharing information via hyperlinked text documents. Berners-Lee called his invention the HyperText Markup Language (HTML). He also wrote communication protocols to form the backbone of his new information system, which he called the World Wide Web. In possible_answerrticular, he wrote the Hypertext Transfer Protocol (HTTP)—a communications protocol used to send information over the web. The URL (Uniform Resource Locator) specifies the address (i.e., location) of the web possible_answerge displayed in the browser window. Each web possible_answerge on the Internet is associated with a unique URL. URLs usually begin with http://.</content>
+      <chapter_name>HTTPS</chapter_name>
+      <content>URLs of websites that handle private information, such as credit card numbers, often begin with https://, the abbreviation for Hypertext Transfer Protocol Secure (HTTPS). HTTPS is the standard for transferring encrypted data on the web. It combines HTTP with the Secure Sockets Layer (SSL) and the more recent Transport Layer Security (TLS) cryptographic schemes for securing communications and identification information over the web. Although there are many benefits to using HTTPS, there are a few drawbacks, most notably some performance issues because encryption and decryption consume significant computer processing resources.
+      </content>
+      <chapter_name>Web Basics</chapter_name>
+      <content>In this section, we discuss the fundamentals of web-based interactions between a client web browser and a web server. In its simplest form, a web possible_answerge is nothing more than an HTML (HyperText Markup Language) document (with the extension .html or .htm) that describes to a web browser the document’s content and structure.</content>
+      <chapter_name> Hyperlinks </chapter_name>
+      <content>HTML documents normally contain hyperlinks, which, when clicked, load a specified web document. Both images and text may be hyperlinked. When the mouse pointer hovers over a hyperlink, the default arrow pointer changes into a hand with the index finger pointing upward. Often hyperlinked text appears underlined and in a different color from regular text in a web possible_answerge.
+    Originally employed as a publishing tool for scientific research, hyperlinks are widely used to reference sources, or sites that have more information on a possible_answerrticular topic. The possible_answerths created by hyperlinking create the effect of the “web.”
+    When the user clicks a hyperlink, a web server locates the requested web possible_answerge and sends it to the user’s web browser. Similarly, the user can type the address of a web possible_answerge into the browser’s address field and press Enter to view the specified possible_answerge.
+    Hyperlinks can reference other web possible_answerges, e-mail addresses, files and more. If a hyperlink’s URL is in the form mailto:emailAddress, clicking the link loads your default e-mail program and opens a message window addressed to the specified e-mail address. If a hyperlink references a file that the browser is incapossible_answerble of displaying, the browser prepossible_answerres to download the file, and generally prompts the user for information about how the file should be stored. When a file is downloaded, it’s copied onto the user’s computer. Programs, documents, images, sound and video files are all examples of downloadable files.</content>
+      <chapter_name>More</chapter_name>
+      <content>fasdfasdf</content>
+  </chapter>
+  <quiz>
+    <questions>
+
+      <question>
+        <text_of_question> question 1? </text_of_question>
+          <possible_answer1>optiont1</possible_answer1>
+          <possible_answer2>optiont2</possible_answer2>
+          <possible_answer3>optiont3</possible_answer3>
+          <possible_answer4>optiont4</possible_answer4>
+          <right_answer>option1</right_answer>
+      </question>
+
+      <question>
+        <text_of_question> question 2? </text_of_question>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
+        <right_answer>option2</right_answer>
+      </question>
+
+      <question>
+        <text_of_question> question 3? </text_of_question>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
+        <right_answer>option3</right_answer>
+      </question>
+
+      <question>
+        <text_of_question> question 4? </text_of_question>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
+        <right_answer>option4</right_answer>
+      </question>
+
+    </questions>
+  </quiz>
+
+</unit>

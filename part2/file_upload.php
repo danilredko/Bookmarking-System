@@ -7,8 +7,6 @@
   </head>
   <body>
 
-
-
     <?php
     $servername = "localhost";
     $username = "danil";
@@ -32,20 +30,18 @@
 
     ?>
 
-    <p>You can add files to the system for review by an administrator.
-    Click <b>Browse</b> to select the file you'd like to upload,
-    and then click <b>Upload</b>.</p>
 
-    <form action="read_file.php" method="POST"
-          enctype="multipart/form-data">
+   <p>You can add files to the system for review by an administrator.
+   Click <b>Browse</b> to select the file you'd like to upload,
+   and then click <b>Upload</b>.</p>
 
-        <input type="file" name="ufile" \>
-        <input type="submit" value="Upload" \>
+   <form action="read_file.php" method="POST"
+         enctype="multipart/form-data">
 
-    </form>
+       <input type="file" name="ufile" \>
+       <input type="submit" value="Upload" \>
 
-    
-
+   </form>
 
 
 

@@ -113,7 +113,7 @@ if ( isset( $_SESSION['username'] ) ) {
 
 
 
-
+  header('Location: homepage.php');
   } else {
 
     echo "Error: " . $sql_add_chapter . "<br>" . mysqli_error($conn);
