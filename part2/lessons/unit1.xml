@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <unit>
-  <title>Unit 1: </title>
+  <title>Unit 1 </title>
 
   <chapter>
 
@@ -31,34 +31,37 @@
 
       <question>
         <text_of_question> question 1? </text_of_question>
-        <options>
-          <possible_answer>optiont1</possible_answer>
-          <possible_answer>optiont2</possible_answer>
-          <possible_answer>optiont3</possible_answer>
-          <possible_answer>optiont4</possible_answer>
-        </options>
-        <right_answer>option4</right_answer>
+          <possible_answer1>optiont1</possible_answer1>
+          <possible_answer2>optiont2</possible_answer2>
+          <possible_answer3>optiont3</possible_answer3>
+          <possible_answer4>optiont4</possible_answer4>
+          <right_answer>option1</right_answer>
       </question>
 
       <question>
         <text_of_question> question 2? </text_of_question>
-        <options>
-          <possible_answer>optiont1</possible_answer>
-          <possible_answer>optiont2</possible_answer>
-          <possible_answer>optiont3</possible_answer>
-          <possible_answer>optiont4</possible_answer>
-        </options>
-        <right_answer>option1</right_answer>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
+        <right_answer>option2</right_answer>
       </question>
 
       <question>
         <text_of_question> question 3? </text_of_question>
-        <options>
-          <possible_answer>optiont1</possible_answer>
-          <possible_answer>optiont2</possible_answer>
-          <possible_answer>optiont3</possible_answer>
-          <possible_answer>optiont4</possible_answer>
-        </options>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
+        <right_answer>option3</right_answer>
+      </question>
+
+      <question>
+        <text_of_question> question 4? </text_of_question>
+        <possible_answer1>optiont1</possible_answer1>
+        <possible_answer2>optiont2</possible_answer2>
+        <possible_answer3>optiont3</possible_answer3>
+        <possible_answer4>optiont4</possible_answer4>
         <right_answer>option4</right_answer>
       </question>
 

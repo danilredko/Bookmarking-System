@@ -7,6 +7,7 @@ CREATE TABLE users (
 CREATE TABLE chapter (
     chapter_id INT NOT NULL AUTO_INCREMENT ,
     username VARCHAR(30),
+    chapter_name VARCHAR(30),
     INDEX par_ind (username),
     PRIMARY KEY(chapter_id),
     FOREIGN KEY (username)
@@ -26,33 +27,18 @@ CREATE TABLE content (
 
 );
 
-CREATE TABLE quiz (
-
-  quiz_id INT NOT NULL AUTO_INCREMENT,
-  chapter_id INT,
-  PRIMARY KEY(quiz_id),
-  INDEX chap_ind(chapter_id),
-  FOREIGN KEY (chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
-);
 
 CREATE TABLE quiz_question (
 
   question_id INT NOT NULL AUTO_INCREMENT,
-  quiz_id INT,
+  chapter_id INT,
   question TEXT,
+  option1 TEXT,
+  option2 TEXT,
+  option3 TEXT,
+  option4 TEXT,
+  right_option TEXT,
   PRIMARY KEY(question_id),
-  INDEX quiz_ind(quiz_id),
-  FOREIGN KEY (quiz_id) REFERENCES quiz(quiz_id) ON DELETE SET NULL
-
+  INDEX chap_ind(chapter_id),
+  FOREIGN KEY (chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
 );
-
-CREATE TABLE quiz_options (
-
-  option_id INT NOT NULL AUTO_INCREMENT,
-  question_id INT,
-  option TEXT,
-  right_answer INT,
-  PRIMARY KEY(option_id),
-  INDEX question_ind(question_id),
-  FOREIGN KEY (question_id) REFERENCES quiz_question(question_id) ON DELETE SET NULL
-)
