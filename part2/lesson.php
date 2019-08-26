@@ -11,7 +11,6 @@
     <button onclick="window.location.href='homepage.php'" >
       Home
     </button>
-    <a href="homepage.php" class="button">Home</a>
 
     <?php
     $servername = "localhost";
@@ -44,18 +43,91 @@
 
           $list_of_chapter_content = mysqli_query($conn, $sql_show_chapter_content);
 
-          echo "";
+          echo "<h1 style='text-align: center;'>" . $chapter_name . "</h1>";
+          echo "<hr>";
 
           if(mysqli_num_rows($list_of_chapter_content) > 0){
 
             while ($row = mysqli_fetch_assoc($list_of_chapter_content)) {
 
                 echo "<div class='url_container'" ,  " >";
-                echo $row['content_name'], "<br>";
-                echo $row['content_text'], "<br>";
+                echo "<h3>", $row['content_name'], "</h3>";
+                echo "<p style='text-align:left;'>", $row['content_text'], "</p>";
+                echo "<hr>";
                 echo "</div>";
 
         }
+
+
+        echo "<h1 style='text-align: center;'> QUIZ </h1>";
+
+
+        $sql_to_load_quiz = "SELECT * FROM quiz_question WHERE chapter_id='$chapter_id'";
+
+        $list_of_questions = mysqli_query($conn, $sql_to_load_quiz);
+
+        $row_num = 0;
+
+        $right_answers = array();
+        if(mysqli_num_rows($list_of_questions) > 0){
+
+
+
+          while ($row = mysqli_fetch_assoc($list_of_questions)) {
+
+              echo "<div class='url_container'>";
+              echo "<h2>", $row['question'], "</h2>";
+              echo "</div>";
+              echo "<hr>";
+
+
+              echo "<div style ='text-align:left;' class='url_container'" ,  " id  = question" .$row_num.    ">";
+              $choice = 'choice'. "$row_num";
+              $id = 0;
+              $id_string = "$row_num"."$id";
+              echo "<input type='radio' name=" , $choice, " id = ", $id_string , ">";
+              echo "<label id=label", "$id_string >",  $row['option1'] , "</label>";
+              echo "<hr>";
+
+              $id= $id + 1;
+              $id_string = "$row_num"."$id";
+              echo "<input type='radio' name=" , $choice, " id = ", $id_string , ">";
+              echo "<label id=label", "$id_string >",  $row['option2'] , "</label>";
+              echo "<hr>";
+
+
+
+              $id= $id + 1;
+              $id_string = "$row_num"."$id";
+              echo "<input type='radio' name=" , $choice, " id = ", $id_string , ">";
+              echo "<label id=label", "$id_string >",  $row['option3'] , "</label>";
+              echo "<hr>";
+
+              $id= $id + 1;
+              $id_string = "$row_num"."$id";
+              echo "<input type='radio' name=" , $choice, " id = ", $id_string , ">";
+              echo "<label id=label", "$id_string >",  $row['option4'] , "</label>";
+              echo "<hr>";
+
+
+              echo "</div>";
+
+              $row_num = $row_num + 1;
+              $right_answer = $row['right_option'];
+              array_push($right_answers, $right_answer);
+
+      }
+
+
+      $str_to_pass = json_encode($right_answers);
+
+      echo "<button onclick=ChechQuiz($str_to_pass)> CHECK </button>";
+
+
+
+
+      }
+
 
 
 
@@ -65,7 +137,19 @@
         }
 
 
-    }}
+    }
+
+
+
+
+
+
+
+
+
+
+
+  }
 
 
 
