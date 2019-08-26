@@ -44,7 +44,7 @@
           $row_num = $row_num + 1;
 
           echo "<div id=row", $row_num, " class = 'url_container'>";
-          echo "<p style='width:50%;' >" , "URL: <a id=", $row['URL'], " href=https://", $row['URL'],">",  $row['URL'] , "</a></p>";
+          echo "<p >" , "URL: <a id=", $row['URL'], " href=https://", $row['URL'],">",  $row['URL'] , "</a></p>";
           echo "<button id='row_button", $row_num, "' class='edit_button' onclick=" , "edit_url(" , "'", $row['URL'] ,"',$row_num)>Edit </button>";
           echo "<button id='delete_row_button", $row_num, "' class='delete_button' onclick=" , "delete_url(" , "'", $row['URL'] ,"',$row_num)>Delete</button>";
           echo "</div>";

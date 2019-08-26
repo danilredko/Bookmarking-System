@@ -58,6 +58,8 @@ background-color: blue;
 
 .url_container{
   width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .clearfix::after {

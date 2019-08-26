@@ -51,6 +51,8 @@ if(isset($_FILES['ufile']['name'])){
 
     $chapter_name  =  $xml->title;
 
+    $chapter_name =  str_replace(' ', '', $chapter_name);
+
     $sql_add_chapter = "INSERT INTO chapter (chapter_id, username, chapter_name) VALUES (NULL, '$user', '$chapter_name')";
 
     $result = mysqli_query($conn, $sql_add_chapter);

@@ -111,8 +111,6 @@ function delete_url(url, row_num){
   xhttp.open("GET", "delete_bookmark.php?delete_url="+url, true);
   xhttp.send();
 
-
-
 };
 
 
@@ -156,6 +154,25 @@ function change_url(row_num){
   };
 
   xhttp.open("GET", "edit_bookmark.php?new_url="+getNewUrl(row_num)+"&old_url="+old_url, true);
+  xhttp.send();
+
+};
+
+function load_chapter(url, row_num){
+
+  console.log(row_num);
+  console.log(" url: "+url);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+
+
+    }
+  };
+
+  xhttp.open("GET", "show_chapter.php?q="+url, true);
   xhttp.send();
 
 };
