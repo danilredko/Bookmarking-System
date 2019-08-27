@@ -45,7 +45,7 @@
         <possible_answer2>Web Pages</possible_answer2>
         <possible_answer3>URLs (Uniform Resource Locators)</possible_answer3>
         <possible_answer4>URIs(Uniform Resource Identifiers)</possible_answer4>
-        <right_answer>URLs (Uniform Resource Locators).</right_answer>
+        <right_answer>URLs (Uniform Resource Locators)</right_answer>
       </question>
       <question>
         <text_of_question>What number indicates success of HTTP request?</text_of_question>
@@ -56,7 +56,7 @@
         <right_answer>200</right_answer>
       </question>
       <question>
-        <text_of_question>What number indicates the client that the web server couldn't locate the requested resource?</text_of_question>
+        <text_of_question>What number indicates the client that the web server could not locate the requested resource?</text_of_question>
         <possible_answer1>404</possible_answer1>
         <possible_answer2>200</possible_answer2>
         <possible_answer3>505</possible_answer3>
@@ -74,3 +74,4 @@
     </questions>
   </quiz>
 </unit>
+

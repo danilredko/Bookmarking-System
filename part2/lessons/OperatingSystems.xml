@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <title>Operating Systems</title>
+
+  <chapter>
+
+	 <chapter_name>Operating Systems</chapter_name>
+	 <content>Operating systems are software systems that make using computers more convenient for users, application developers and system administrators. Operating systems provide services that allow each application to execute safely, efficiently and concurrently (i.e., in parallel) with other applications. The software that contains the core components of the operating system is called the kernel. Popular desktop operating systems include Linux, Windows 7 and Mac OS X. Popular mobile operating systems used in smartphones and tablets include Google’s Android, Apple’s iOS (for iPhone, iPad and iPod Touch devices), BlackBerry OS and Windows Phone 7</content>
+	<chapter_name>Desktop and Notebook Operating Systems</chapter_name>
+	 <content>In this section we discuss two of the popular desktop operating systems—the proprietary Windows operating system and the open source Linux operating system.</content>
+	 <chapter_name>  Windows—A Proprietary Operating System </chapter_name>
+	 <content>In the mid-1980s, Microsoft developed the Windows operating system, consisting of a graphical user interface built on top of DOS—an enormously popular personal-computer operating system of the time that users interacted with by typing commands. Windows borrowed from many concepts (such as icons, menus and windows) developed by Xerox PARC and popularized by early Apple Macintosh operating systems. Windows 7 is Microsoft’s latest operating system—its features include enhancements to the user interface, faster startup times, further refinement of security features, touch-screen and multitouch support, and more. Windows is a proprietary operating system—it’s controlled by Microsoft exclusively. Windows is by far the world’s most widely used operating system.</content>
+	 <chapter_name> Linux—An Open-Source Operating System </chapter_name>
+	 <content>The Linux operating system is perhaps the greatest success of the open-source movement. Open-source software departs from the proprietary software development style that dominated software’s early years. With open-source development, individuals and companies contribute their efforts in developing, maintaining and evolving software in exchange for the right to use that software for their own purposes, typically at no charge. Open-source code is often scrutinized by a much larger audience than proprietary software, so errors often get removed faster. Open source also encourages more innovation. Enterprise systems companies, such as IBM, Oracle and many others, have made significant investments in Linux open-source development.
+Some key organizations in the open-source community are the Eclipse Foundation (the Eclipse Integrated Development Environment helps programmers conveniently develop software), the Mozilla Foundation (creators of the Firefox web browser), the Apache Software Foundation (creators of the Apache web server used to develop web-based applications) and SourceForge (which provides the tools for managing open-source projects—it has over 306,000 of them under development). Rapid improvements to computing and communications, decreasing costs and open-source software have made it much easier and more economical to create a software-based business now than just a decade ago. A great example is Facebook, which was launched from a college dorm room and built with open-source software.6
+The Linux kernel is the core of the most popular open-source, freely distributed, full-featured operating system. It’s developed by a loosely organized team of volunteers and is popular in servers, personal computers and embedded systems. Unlike that of proprietary operating systems like Microsoft’s Windows and Apple’s Mac OS X, Linux source code (the program code) is available to the public for examination and modification and is free to download and install. As a result, Linux users benefit from a community of developers actively debugging and improving the kernel, an absence of licensing fees and restrictions, and the ability to completely customize the operating system to meet specific needs.
+A variety of issues—such as Microsoft’s market power, the small number of user-friendly Linux applications and the diversity of Linux distributions, such as Red Hat Linux, Ubuntu Linux and many others—have prevented widespread Linux use on desktop computers. But Linux has become extremely popular on servers and in embedded systems, such as Google’s Android-based smartphones.</content>
+	 <chapter_name>Mobile Operating Systems</chapter_name>
+	 <content>Two of the most popular mobile operating systems are Apple’s iOS and Google’s Android.</content>
+	 <chapter_name>iOS for iPhone, iPad and iPod Touch</chapter_name>
+	 <content>Apple, founded in 1976 by Steve Jobs and Steve Wozniak, quickly became a leader in personal computing. In 1979, Jobs and several Apple employees visited Xerox PARC (Palo Alto Research Center) to learn about Xerox’s desktop computer that featured a graphical user interface (GUI). That GUI served as the inspiration for the Apple Lisa personal computer (designed for business customers) and, more notably, the Apple Macintosh, launched with much fanfare in a memorable Super Bowl ad in 1984. Steve Jobs left Apple in 1985 and founded NeXT Inc.The Objective-C programming language, created by Brad Cox and Tom Love at Stepstone in the early 1980s, added capabilities for object-oriented programming (OOP) to the C programming language. In 1988, NeXT licensed Objective-C from StepStone and developed an Objective-C compiler and libraries which were used as the platform for the NeXTSTEP operating system’s user interface and Interface Builder—used to construct graphical user interfaces. Apple’s Mac OS X operating system is a descendant of NeXTSTEP. Apple’s proprietary iPhone operating system, iOS, is derived from Apple’s Mac OS X and is used in the iPhone, iPad and iPod Touch devices.
+You can download apps directly onto your iPhone, iPad or iPod device through the App Store. There are over 425,000 apps in the App Store.</content>
+	 <chapter_name> Google’s Android </chapter_name>
+	 <content>Android—the fastest growing mobile and smartphone operating system—is based on the Linux kernel and Java. Experienced Java programmers can quickly dive into Android development. One benefit of developing Android apps is the openness of the platform. The operating system is open source and free.
+The Android operating system was developed by Android, Inc., which was acquired by Google in 2005. In 2007, the Open Handset Alliance™—a consortium of 34 companies initially and 84 by 2011—was formed to continue developing Android. As of June 2011, more than 500,000 Android smartphones were being activated each day!7 Android smartphones are now outselling iPhones in the United States.8 The Android operating system is used in numerous smartphones (such as the Motorola Droid, HTC EVO™ 4G, Samsung Vibrant™ and many more), e-reader devices (such as the Barnes and Noble Nook™), tablet computers (such as the Dell Streak and the Samsung Galaxy Tab), in-store touch-screen kiosks, cars, robots, multimedia players and more.
+You can download apps directly onto your Android device through Android Market and other app marketplaces. As of August 2011, there were over 250,000 apps in Google’s Android Market.</content>
+	
+  </chapter>
+  <quiz>
+    <questions>
+
+      <question>
+		<text_of_question>What is the name of the core components of the Operating System?</text_of_question>
+		<possible_answer1>iOS</possible_answer1>
+		<possible_answer2>Unix</possible_answer2>
+		<possible_answer3>Application</possible_answer3>
+		<possible_answer4>Kernel</possible_answer4>
+		<right_answer>Kernel</right_answer>
+      </question>
+	<question>
+		<text_of_question>When was Windows Operating System created?</text_of_question>
+		<possible_answer1>1980s</possible_answer1>
+		<possible_answer2>1950s</possible_answer2>
+		<possible_answer3>1960s</possible_answer3>
+		<possible_answer4>1970s</possible_answer4>
+		<right_answer>1980s</right_answer>
+      </question>
+      <question>
+		<text_of_question>When Apple was founded?</text_of_question>
+		<possible_answer1>1967</possible_answer1>
+		<possible_answer2>1976</possible_answer2>
+		<possible_answer3>1980</possible_answer3>
+		<possible_answer4>1955</possible_answer4>
+		<right_answer>1976</right_answer>
+      </question>
+      <question>
+		<text_of_question>Which operating system is based on the Linux kernel and Java?</text_of_question>
+		<possible_answer1>Windows</possible_answer1>
+		<possible_answer2>Google OS</possible_answer2>
+		<possible_answer3>Android</possible_answer3>
+		<possible_answer4>iOS</possible_answer4>
+		<right_answer>Android</right_answer>
+      </question>
+
+
+
+
+    </questions>
+  </quiz>
+
+</unit>

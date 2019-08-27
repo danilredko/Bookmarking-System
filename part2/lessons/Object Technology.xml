@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <title> Object Technology</title>
+
+  <chapter>
+
+	 <chapter_name>Object Technology</chapter_name>
+	 <content>Building software quickly, correctly and economically remains an elusive goal at a time when demands for new and more powerful software are soaring. Objects, or more precisely the classes objects come from, are essentially reusable software components. There are date objects, time objects, audio objects, video objects, automobile objects, people objects, etc. Almost any noun can be reasonably represented as a software object in terms of attributes (e.g., name, color and size) and behaviors (e.g., calculating, moving and communicating). Software developers are discovering that using a modular, object-oriented design and implementation approach can make software-development groups much more productive than was possible with earlier techniques—object-oriented programs are often easier to understand, correct and modify.</content>
+	 <chapter_name> The Automobile as an Object </chapter_name>
+	 <content>Let’s begin with a simple analogy. Suppose you want to drive a car and make it go faster by pressing its accelerator pedal. What must happen before you can do this? Well, before you can drive a car, someone has to design it. A car typically begins as engineering drawings, similar to the blueprints that describe the design of a house. These drawings include the design for an accelerator pedal. The pedal hides from the driver the complex mechanisms that actually make the car go faster, just as the brake pedal hides the mechanisms that slow the car, and the steering wheel hides the mechanisms that turn the car. This enables people with little or no knowledge of how engines, braking and steering mechanisms work to drive a car easily.
+Before you can drive a car, it must be built from the engineering drawings that describe it. A completed car has an actual accelerator pedal to make the car go faster, but even that’s not enough—the car won’t accelerate on its own (hopefully!), so the driver must press the pedal to accelerate the car.</content>
+	 <chapter_name> Methods and Classes </chapter_name>
+	 <content>Let’s use our car example to introduce some key object-oriented programming concepts. Performing a task in a program requires a method. The method houses the program statements that actually perform its tasks. It hides these statements from its user, just as a car’s accelerator pedal hides from the driver the mechanisms of making the car go faster. In object-oriented programming languages, we create a program unit called a class to house the set of methods that perform the class’s tasks. For example, a class that represents a bank account might contain one method to deposit money to an account, another to withdraw money from an account and a third to inquire what the account’s current balance is. A class is similar in concept to a car’s engineering drawings, which house the design of an accelerator pedal, steering wheel, and so on.</content>
+	 <chapter_name>Instantiation</chapter_name>
+	 <content>Just as someone has to build a car from its engineering drawings before you can actually drive a car, you must build an object from a class before a program can perform the tasks that the class’s methods define. The process of doing this is called instantiation. An object is then referred to as an instance of its class.</content>
+	 <chapter_name> Reuse</chapter_name>
+	 <content>Just as a car’s engineering drawings can be reused many times to build many cars, you can reuse a class many times to build many objects. Reuse of existing classes when building new classes and programs saves time and effort. Reuse also helps you build more reliable and effective systems, because existing classes and components often have gone through extensive testing, debugging and performance tuning. Just as the notion of interchangeable parts was crucial to the Industrial Revolution, reusable classes are crucial to the software revolution that has been spurred by object technology.</content>
+	 <chapter_name> Messages and Method Calls </chapter_name>
+	 <content>When you drive a car, pressing its gas pedal sends a message to the car to perform a task—that is, to go faster. Similarly, you send messages to an object. Each message is implemented as a method call that tells a method of the object to perform its task. For example, a program might call a particular bank-account object’s deposit method to increase the account’s balance.</content>
+	 <chapter_name> Attributes and Instance Variables </chapter_name>
+	 <content>A car, besides having capabilities to accomplish tasks, also has attributes, such as its color, its number of doors, the amount of gas in its tank, its current speed and its record of total miles driven (i.e., its odometer reading). Like its capabilities, the car’s attributes are represented as part of its design in its engineering diagrams (which, for example, include an odometer and a fuel gauge). As you drive an actual car, these attributes are carried along with the car. Every car maintains its own attributes. For example, each car knows how much gas is in its own gas tank, but not how much is in the tanks of other cars.
+An object, similarly, has attributes that it carries along as it’s used in a program. These attributes are specified as part of the object’s class. For example, a bank-account object has a balance attribute that represents the amount of money in the account. Each bank-account object knows the balance in the account it represents, but not the balances of the other accounts in the bank. Attributes are specified by the class’s instance variables. </content>
+	 <chapter_name>Encapsulation </chapter_name>
+	 <content>Classes encapsulate (i.e., wrap) attributes and methods into objects—an object’s attributes and methods are intimately related. Objects may communicate with one another, but normally they’re not allowed to know how other objects are implemented—implementation details are hidden within the objects themselves. This information hiding is crucial to good software engineering.</content>
+	 <chapter_name> Inheritance</chapter_name>
+	 <content>A new class of objects can be created quickly and conveniently by inheritance—the new class absorbs the characteristics of an existing class, possibly customizing them and adding unique characteristics of its own. In our car analogy, an object of class “convertible” certainly is an object of the more general class “automobile,” but more specifically, the roof can be raised or lowered.</content>
+	
+  </chapter>
+  <quiz>
+    <questions>
+
+      <question>
+		<text_of_question>What is required to perform a task in a program?</text_of_question>
+		<possible_answer1>reuse</possible_answer1>
+		<possible_answer2>object</possible_answer2>
+		<possible_answer3>method</possible_answer3>
+		<possible_answer4>class</possible_answer4>
+		<right_answer>method</right_answer>
+      </question>
+	<question>
+		<text_of_question>How do we call a unit to house the set of methods that perform the units task?</text_of_question>
+		<possible_answer1>class</possible_answer1>
+		<possible_answer2>object</possible_answer2>
+		<possible_answer3>method</possible_answer3>
+		<possible_answer4>instance</possible_answer4>
+		<right_answer>class</right_answer>
+      </question>
+	<question>
+		<text_of_question>An object is then referred to as ____________ of its class. </text_of_question>
+		<possible_answer1>object</possible_answer1>
+		<possible_answer2>instance</possible_answer2>
+		<possible_answer3>class</possible_answer3>
+		<possible_answer4>method</possible_answer4>
+		<right_answer>instance</right_answer>
+      </question>
+	<question>
+		<text_of_question>What tells the method to perform its task? </text_of_question>
+		<possible_answer1>method call</possible_answer1>
+		<possible_answer2>inheritance</possible_answer2>
+		<possible_answer3>class</possible_answer3>
+		<possible_answer4>object</possible_answer4>
+		<right_answer>method call</right_answer>
+      </question>
+
+
+
+    </questions>
+  </quiz>
+
+</unit>
