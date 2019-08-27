@@ -43,6 +43,7 @@
 
           $list_of_chapter_content = mysqli_query($conn, $sql_show_chapter_content);
 
+
           echo "<h1 style='text-align: center;'>" . $chapter_name . "</h1>";
           echo "<hr>";
 
@@ -65,9 +66,7 @@
         $sql_to_load_quiz = "SELECT * FROM quiz_question WHERE chapter_id='$chapter_id'";
 
         $list_of_questions = mysqli_query($conn, $sql_to_load_quiz);
-
         $row_num = 0;
-
         $right_answers = array();
         if(mysqli_num_rows($list_of_questions) > 0){
 
@@ -121,7 +120,7 @@
 
       $str_to_pass = json_encode($right_answers);
 
-      echo "<button onclick=ChechQuiz($str_to_pass)> CHECK </button>";
+      echo "<button onclick='CheckQuiz($str_to_pass)'> CHECK </button>";
 
 
 
@@ -150,10 +149,6 @@
 
 
   }
-
-
-
-
 
 
     mysqli_close($conn);

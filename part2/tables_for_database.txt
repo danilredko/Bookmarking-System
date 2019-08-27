@@ -12,7 +12,7 @@ CREATE TABLE chapter (
     PRIMARY KEY(chapter_id),
     FOREIGN KEY (username)
         REFERENCES users(username)
-        ON DELETE SET NULL
+        ON DELETE CASCADE
 
 );
 
@@ -21,9 +21,10 @@ CREATE TABLE content (
   content_id INT NOT NULL AUTO_INCREMENT,
   content_text TEXT,
   chapter_id INT,
+  content_name TEXT,
   PRIMARY KEY(content_id),
   INDEX chap_ind (chapter_id),
-  FOREIGN KEY(chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
+  FOREIGN KEY(chapter_id) REFERENCES chapter(chapter_id) ON DELETE CASCADE
 
 );
 
@@ -40,5 +41,5 @@ CREATE TABLE quiz_question (
   right_option TEXT,
   PRIMARY KEY(question_id),
   INDEX chap_ind(chapter_id),
-  FOREIGN KEY (chapter_id) REFERENCES chapter(chapter_id) ON DELETE SET NULL
+  FOREIGN KEY (chapter_id) REFERENCES chapter(chapter_id) ON DELETE CASCADE
 );

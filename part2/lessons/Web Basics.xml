@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit>
+  <title>Web Basics</title>
+  <chapter>
+    <chapter_name>
+    </chapter_name>
+    <content>
+    </content>
+    <chapter_name>Web Basics</chapter_name>
+    <content>In this section, we discuss the fundamentals of web-based interactions between a client web browser and a web server. In its simplest form, a web page is nothing more than an HTML (HyperText Markup Language) document (with the extension .html or .htm) that describes to a web browser the document’s content and structure.</content>
+    <chapter_name>Hyperlinks</chapter_name>
+    <content>HTML documents normally contain hyperlinks, which, when clicked, load a specified web document. Both images and text may be hyperlinked. When the mouse pointer hovers over a hyperlink, the default arrow pointer changes into a hand with the index finger pointing upward. Often hyperlinked text appears underlined and in a different color from regular text in a web page.Originally employed as a publishing tool for scientific research, hyperlinks are widely used to reference sources, or sites that have more information on a particular topic. The paths created by hyperlinking create the effect of the “web.”When the user clicks a hyperlink, a web server locates the requested web page and sends it to the user’s web browser. Similarly, the user can type the address of a web page into the browser’s address field and press Enter to view the specified page.Hyperlinks can reference other web pages, e-mail addresses, files and more. If a hyperlink’s URL is in the form mailto:emailAddress, clicking the link loads your default e-mail program and opens a message window addressed to the specified e-mail address. If a hyperlink references a file that the browser is incapable of displaying, the browser prepares to download the file, and generally prompts the user for information about how the file should be stored. When a file is downloaded, it’s copied onto the user’s computer. Programs, documents, images, sound and video files are all examples of downloadable files.</content>
+    <chapter_name> URIs and URLs </chapter_name>
+    <content>URIs (Uniform Resource Identifiers) identify resources on the Internet. URIs that start with http:// are called URLs (Uniform Resource Locators). Common URLs refer to files, directories or server-side code that performs tasks such as database lookups, Internet searches and business-application processing. If you know the URL of a publicly available resource anywhere on the web, you can enter that URL into a web browser’s address field and the browser can access that resource.</content>
+    <chapter_name> Parts of a URL</chapter_name>
+    <content>A URL contains information that directs a browser to the resource that the user wishes to access. Web servers make such resources available to web clients. Popular web servers include Apache’s HTTP Server and Microsoft’s Internet Information Services (IIS).The text http:// indicates that the HyperText Transfer Protocol (HTTP) should be used to obtain the resource. Next in the URL is the server’s fully qualified hostname (for example, www.deitel.com)—the name of the web-server computer on which the resource resides. This computer is referred to as the host, because it houses and maintains resources. The hostname www.deitel.com is translated into an IP (Internet Protocol) address—a numerical value that uniquely identifies the server on the Internet. An Internet Domain Name System (DNS) server maintains a database of hostnames and their corresponding IP addresses and performs the translations automatically.The remainder of the URL (/books/downloads.html) specifies the resource’s location (/books) and name (downloads.html) on the web server. The location could represent an actual directory on the web server’s file system. For security reasons, however, the location is typically a virtual directory. The web server translates the virtual directory into a real location on the server, thus hiding the resource’s true location.</content>
+    <chapter_name> Making a Request and Receiving a Response </chapter_name>
+    <content>The word GET is an HTTP method indicating that the client wishes to obtain a resource from the server. The remainder of the request provides the path name of the resource (e.g., an HTML5 document) and the protocol’s name and version number (HTTP/1.1). The client’s request also contains some required and optional headers.</content>
+    <chapter_name>The web browser sends an HTTP request to the server. The request (in its simplest form) </chapter_name>
+    <content> GET /books/downloads.html HTTP/1.1 </content>
+    <chapter_name>Above request explanation </chapter_name>
+    <content>The word GET is an HTTP method indicating that the client wishes to obtain a resource from the server. The remainder of the request provides the path name of the resource (e.g., an HTML5 document) and the protocol’s name and version number (HTTP/1.1). The client’s request also contains some required and optional headers.</content>
+    <chapter_name> Request Status</chapter_name>
+    <content>HTTP/1.1 200 OK - indicates success, whereas  HTTP/1.1 404 Not found - informs the client that the web server could not locate the requested resource.</content>
+    <chapter_name> HTTP get and post Requests</chapter_name>
+    <content>The two most common HTTP request types (also known as request methods) are get and post. A get request typically gets (or retrieves) information from a server, such as an HTML document, an image or search results based on a user-submitted search term. A post request typically posts (or sends) data to a server. Common uses of post requests are to send form data or documents to a server.An HTTP request often posts data to a server-side form handler that processes the data. For example, when a user performs a search or participates in a web-based survey, the web server receives the information specified in the HTML form as part of the request. Get requests and post requests can both be used to send data to a web server, but each request type sends the information differently.A get request appends data to the URL, e.g., www.google.com/search?q=deitel. In this case search is the name of Google’s server-side form handler, q is the name of a variable in Google’s search form and deitel is the search term. The ? in the preceding URL separates the query string from the rest of the URL in a request. A name/value pair is passed to the server with the name and the value separated by an equals sign (=). If more than one name/value pair is submitted, each pair is separated by an ampersand . The server uses data passed in a query string to retrieve an appropriate resource from the server. The server then sends a response to the client. A get request may be initiated by submitting an HTML form whose method attribute is set to "get", or by typing the URL (possibly containing a query string) directly into the browser’s address bar. We discuss HTML forms in Chapters 2–3.A post request sends form data as part of the HTTP message, not as part of the URL. A get request typically limits the query string (i.e., everything to the right of the ?) to a specific number of characters, so it’s often necessary to send large amounts of information using the post method. The post method is also sometimes preferred because it hides the submitted data from the user by embedding it in an HTTP message. If a form submits several hidden input values along with user-submitted data, the post method might generate a URL like www.searchengine.com/search. The form data still reaches the server and is processed in a similar fashion to a get request, but the user does not see the exact information sent.</content>
+    <chapter_name>Client-Side Caching</chapter_name>
+    <content>Browsers often cache (save on disk) recently viewed web pages for quick reloading. If there are no changes between the version stored in the cache and the current version on the web, this speeds up your browsing experience. An HTTP response can indicate the length of time for which the content remains “fresh.” If this amount of time has not been reached, the browser can avoid another request to the server. If not, the browser loads the document from the cache. Similarly, there’s also the “not modified” HTTP response, indicating that the file content has not changed since it was last requested (which is information that’s send in the request). Browsers typically do not cache the server’s response to a post request, because the next post might not return the same result. For example, in a survey, many users could visit the same web page and answer a question. The survey results could then be displayed for the user. Each new answer would change the survey results.</content>
+    <chapter_name> Client-Side Scripting versus Server-Side Scripting</chapter_name>
+    <content>Client-side scripting with JavaScript can be used to validate user input, to interact with the browser, to enhance web pages, and to add client/server communication between a browser and a web server.Client-side scripting does have limitations, such as browser dependency; the browser or scripting host must support the scripting language and capabilities. Scripts are restricted from arbitrarily accessing the local hardware and file system for security reasons. Another issue is that client-side scripts can be viewed by the client by using the browser’s source-viewing capability. Sensitive information, such as passwords or other personally identifiable data, should not be on the client. All client-side data validation should be mirrored on the server. Also, placing certain operations in JavaScript on the client can open web applications to security issues.Programmers have more flexibility with server-side scripts, which often generate custom responses for clients. For example, a client might connect to an airline’s web server and request a list of flights from Boston to San Francisco between April 19 and May 5. The server queries the database, dynamically generates an HTML document containing the flight list and sends the document to the client. This technology allows clients to obtain the most current flight information from the database by connecting to an airline’s web server.Server-side scripting languages have a wider range of programmatic capabilities than their client-side equivalents. Server-side scripts also have access to server-side software that extends server functionality—Microsoft web servers use ISAPI (Internet Server Application Program Interface) extensions and Apache HTTP Servers use modules. Components and modules range from programming-language support to counting the number of web-page hits. We discuss some of these components and modules in subsequent chapters.</content>
+  </chapter>
+  <quiz>
+    <questions>
+      <question>
+        <text_of_question> What extention the simplest form of web page has?</text_of_question>
+        <possible_answer1>.js</possible_answer1>
+        <possible_answer2>.html or .htm</possible_answer2>
+        <possible_answer3>.css</possible_answer3>
+        <possible_answer4>.php</possible_answer4>
+        <right_answer>.html or .htm</right_answer>
+      </question>
+      <question>
+        <text_of_question>How are URIs(Uniform Resource Identifiers) that start with http:// called?</text_of_question>
+        <possible_answer1>Links</possible_answer1>
+        <possible_answer2>Web Pages</possible_answer2>
+        <possible_answer3>URLs (Uniform Resource Locators)</possible_answer3>
+        <possible_answer4>URIs(Uniform Resource Identifiers)</possible_answer4>
+        <right_answer>URLs (Uniform Resource Locators).</right_answer>
+      </question>
+      <question>
+        <text_of_question>What number indicates success of HTTP request?</text_of_question>
+        <possible_answer1>404</possible_answer1>
+        <possible_answer2>200</possible_answer2>
+        <possible_answer3>505</possible_answer3>
+        <possible_answer4>202</possible_answer4>
+        <right_answer>200</right_answer>
+      </question>
+      <question>
+        <text_of_question>What number indicates the client that the web server couldn't locate the requested resource?</text_of_question>
+        <possible_answer1>404</possible_answer1>
+        <possible_answer2>200</possible_answer2>
+        <possible_answer3>505</possible_answer3>
+        <possible_answer4>202</possible_answer4>
+        <right_answer>404</right_answer>
+      </question>
+      <question>
+        <text_of_question>Why browsers use cache?</text_of_question>
+        <possible_answer1>for security</possible_answer1>
+        <possible_answer2>for server-side processing</possible_answer2>
+        <possible_answer3>for speeding up your browsing experience</possible_answer3>
+        <possible_answer4>for better look of the web page</possible_answer4>
+        <right_answer>for speeding up your browsing experience</right_answer>
+      </question>
+    </questions>
+  </quiz>
+</unit>

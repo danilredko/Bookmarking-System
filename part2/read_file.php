@@ -91,7 +91,7 @@ if(isset($_FILES['ufile']['name'])){
 
             };
 
-
+        echo count($xml->quiz->questions->question);
         for($i = 0; $i < count($xml->quiz->questions->question); $i++){
 
 

@@ -27,8 +27,8 @@ if ($result) {
     header('Location: homepage.php');
     echo "New record created successfully";
 } else {
+  header('Location: welcome_learning.php');
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    // header('Location: welcome_learning.php');
 
 }
 

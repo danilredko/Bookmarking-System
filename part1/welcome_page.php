@@ -6,7 +6,7 @@
     <script src='../shared/script.js'></script>
   </head>
   <body>
-
+    <button onclick="window.location.href='../tma2.html'">Assignment Main Page</button>
     <h1 style='text-align:center;'>Welcome to Bookmarking System!</h1>
     <hr>
 

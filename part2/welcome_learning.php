@@ -6,6 +6,7 @@
     <script src='../shared/script_for_part2.js'></script>
   </head>
   <body>
+    <button onclick="window.location.href='../tma2.html'">Assignment Main Page</button>
 
     <h1 style='text-align:center;'>Welcome to Online Learning System!</h1>
     <hr>

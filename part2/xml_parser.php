@@ -27,7 +27,7 @@ if ( isset( $_SESSION['username'] ) ) {
 
   $user = $_SESSION['username'];
 
-  $xml=simplexml_load_file("lessons/unit1.xml") or die("Error: Cannot create object");
+  $xml=simplexml_load_file("lessons/Web Basics.xml") or die("Error: Cannot create object");
 
   $chapter_name  =  $xml->title;
 

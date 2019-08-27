@@ -1,9 +1,9 @@
 
-function ChechQuiz(right_answers){
+function CheckQuiz(right_answers){
 
 
 
-  console.log(right_answers[0]);
+  console.log(right_answers);
 
   total = 0;
 
@@ -13,11 +13,12 @@ function ChechQuiz(right_answers){
       }
 
   var number_of_question = right_answers.length;
+  var number_of_options = 4;
 
   for (i = 0; i<number_of_question; i++){
 
 
-        for (j = 0; j < number_of_question; j++){
+        for (j = 0; j < number_of_options; j++){
 
 
             if (document.getElementById(i+""+j).checked){
@@ -51,7 +52,11 @@ function ChechQuiz(right_answers){
 
       };
 
+      console.log('end');
+
       var score = (total / number_of_question)*100;
+
+      score = parseInt(score);
 
       var total_element = document.createElement('h1');
       total_element.setAttribute('id', 'score_element');
