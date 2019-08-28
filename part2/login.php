@@ -9,8 +9,8 @@ session_start();
 
 
 $servername = "localhost";
-$username = "danil";
-$password = "danil";
+$username = "root";
+$password = "";
 $dbname = "learning";
 
 // Create connection

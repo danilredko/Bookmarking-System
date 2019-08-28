@@ -4,8 +4,8 @@
 
 <?php
 $servername = "localhost";
-$username = "danil";
-$password = "danil";
+$username = "root";
+$password = "";
 $dbname = "bookmarking";
 
 // Create connection
@@ -27,7 +27,7 @@ if ($result) {
     header('Location: bookmarks.php');
     echo "New record created successfully";
 } else {
-    
+
     header('Location: welcome_page.php');
 
 }

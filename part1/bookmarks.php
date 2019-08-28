@@ -12,8 +12,8 @@
     <?php
 
     $servername = "localhost";
-    $username = "danil";
-    $password = "danil";
+    $username = "root";
+    $password = "";
     $dbname = "bookmarking";
 
     // Create connection
